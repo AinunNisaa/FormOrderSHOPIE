@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Button OK KLIK!
                 if (idnumb.getText().toString().isEmpty()) {
-                    idnumb.setError("Nama harus diisi!");
+                    idnumb.setError("ID harus diisi!");
+                } else if (ref.getText().toString().isEmpty()) {
+                    ref.setError("ref harus diisi!");
                 } else {
                     doKlik();
                     Toast.makeText(getApplicationContext(), "Terima kasih sudah order!", Toast.LENGTH_LONG).show();
@@ -101,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
         builder.append("Jumlah Order : ").append(jum).append("\n");
 
-        builder.append("Harga        : ").append("\n");
 
         tvhasil.setText(builder);
     }
